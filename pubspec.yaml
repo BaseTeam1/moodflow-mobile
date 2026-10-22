@@ -1,5 +1,5 @@
 name: moodflow_mobile
-description: "A new Flutter project."
+description: "MoodFlow: mood tracker with an AI companion."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,6 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_localizations:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  equatable: ^3.0.0
+  dio: ^5.11.1
+  flutter_secure_storage: ^11.2.0
+  go_router: ^18.1.1
+  google_fonts: ^9.0.0
+  intl: ^0.20.3
+  flutter_svg: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +55,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -56,6 +67,23 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+# App icon: run `dart run flutter_launcher_icons` after changing these files.
+flutter_launcher_icons:
+  android: true
+  # iOS needs a 1024x1024 PNG without transparency: set `ios: true` and
+  # `image_path_ios: "assets/icon/app_icon.png"` once the designer exports it.
+  ios: false
+  image_path: "assets/icon/app_icon_foreground.png"
+  min_sdk_android: 26
+  adaptive_icon_background: "#7672AA"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+  # The foreground PNG already has the safe-zone padding built in.
+  adaptive_icon_foreground_inset: 0
 
   # To add assets to your application, add an assets section, like this:
   # assets:
